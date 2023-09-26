@@ -1,0 +1,20 @@
+.parent{
+  margin: 2rem;
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.div{
+  background-color: rgb(255, 142, 122);
+  border: 1px black solid;
+}
+
+img{
+  width: 300px;
+  height: 400px;
+}
+
+h2{
+  text-align: center;
+}
