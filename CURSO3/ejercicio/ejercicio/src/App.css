@@ -1,0 +1,13 @@
+.name{
+  color: red;
+  display: flex;
+}
+
+.aficion{
+  color: green;
+}
+
+h2{
+  display: flex;
+  gap: 5px;
+}

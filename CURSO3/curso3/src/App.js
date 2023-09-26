@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import "./App.css"
 
-function App() {
+const App = () => {
+
+
+  const [numero1, setNumero1] = useState()
+  const [numero2, setNumero2] = useState()
+  const [result, setResult] = useState()
+
+  const sumar = ()=>{
+    setResult(Number(numero1)+Number(numero2))
+  }
+
+  const modificar = (e)=>{
+    setNumero1(e.target.value)
+  }
+
+  const modificar2 = (e) =>{
+    setNumero2(e.target.value)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='caja'>
+      <input type='number' value={numero1} onChange={modificar} />+
+      <input type='number' value={numero2} onChange={modificar2}/>=
+      <input value={result} />=
+      <button onClick={sumar}>SUMAR</button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
