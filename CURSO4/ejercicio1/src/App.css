@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.cardCont {
+  justify-content: center;
+  gap: 7rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+p {
+  padding: 1px;
+  margin: 4px;
+}
+
+img {
+  width: 20rem;
+}

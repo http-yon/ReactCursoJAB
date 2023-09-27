@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.divCont{
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  justify-content: center;
+}
+
+.elPapa{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8rem;
+}
+
+
+h2{
+  width: 30rem;
+}
+
+
+span{
+  color: red;
+}
+
