@@ -1,0 +1,33 @@
+*{
+  user-select: none;
+}
+
+.cardCont{
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card{
+  width: 10rem;
+  height: 10rem;
+  border: 1px black solid;
+  align-items: center;
+}
+
+.card div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card div p{
+  background-color: aquamarine;
+  width:5rem ;
+  height: 5rem;
+  text-align: center;
+}
