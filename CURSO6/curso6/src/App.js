@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 const App = () => {
 
   const [data, setData] = useState([])
+  let [estado, setEstado] = useState(0)
 
   useEffect(() => {
     const url = "https://randomuser.me/api/?results=3"
@@ -16,7 +17,7 @@ const App = () => {
             <div>
               {persona.name.first} {persona.name.last}
             </div>
-            <img src={persona.picture.large} alt='si' />
+            <img src={persona.picture.large} alt='imagen' />
           </div>
           ])
         })
@@ -24,14 +25,21 @@ const App = () => {
       .catch(() => console.log("se ha producido un error"))
 
 
-  }, [])
+  }, [estado])
 
-  console.log(data);
+
+  const cambiarEstado = ()=>{
+    setData([])
+    setEstado(estado + 1)
+  }
+
+
   return (
     <div>
       <h1>Empleado/a del mes</h1>
       <div>
-        {}
+        {data}
+        <button onClick={cambiarEstado}>Cambiar</button>
       </div>
     </div>
   )
