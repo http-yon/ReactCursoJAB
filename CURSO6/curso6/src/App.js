@@ -1,38 +1,34 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 const App = () => {
-
-  const [data, setData] = useState([])
-  let [estado, setEstado] = useState(0)
+  const [data, setData] = useState([]);
+  let [estado, setEstado] = useState(0);
 
   useEffect(() => {
-    const url = "https://randomuser.me/api/?results=3"
-    const peticion = fetch(url)
+    const url = "https://randomuser.me/api/?results=3";
+    const peticion = fetch(url);
     peticion
       .then((datos) => datos.json())
-      .then(lectura => {
+      .then((lectura) => {
         lectura.results.map((persona) => {
-          setData((e) => [...e,
-          <div key={persona.email}>
-            <div>
-              {persona.name.first} {persona.name.last}
-            </div>
-            <img src={persona.picture.large} alt='imagen' />
-          </div>
-          ])
-        })
+          setData((e) => [
+            ...e,
+            <div key={persona.email}>
+              <div>
+                {persona.name.first} {persona.name.last}
+              </div>
+              <img src={persona.picture.large} alt="imagen" />
+            </div>,
+          ]);
+        });
       })
-      .catch(() => console.log("se ha producido un error"))
+      .catch(() => console.log("se ha producido un error"));
+  }, [estado]);
 
-
-  }, [estado])
-
-
-  const cambiarEstado = ()=>{
-    setData([])
-    setEstado(estado + 1)
-  }
-
+  const cambiarEstado = () => {
+    setData([]);
+    setEstado(estado + 1);
+  };
 
   return (
     <div>
@@ -42,7 +38,7 @@ const App = () => {
         <button onClick={cambiarEstado}>Cambiar</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
