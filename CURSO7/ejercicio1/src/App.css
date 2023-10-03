@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .banderas{
   display: flex;
   justify-content: center;
@@ -11,4 +16,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+
+button{
+  background-color: rgb(14, 247, 169);
+  margin: 1rem;
+  padding: 0.5rem 3rem;
+  border: 1px black solid;
+}
+
+.lugar{
+  background-color: aquamarine;
+  border: 1px black solid;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.lugar img{
+  width: 15rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: 1rem;
 }

@@ -15,7 +15,7 @@ const Info = () => {
 
   const mostarLugar = ()=>{
     setData(
-      <div>
+      <div className='lugar'>
         <h2> {valores[numero].boton2} </h2>
         <h3> {valores[numero].direccion} </h3>
       </div>
@@ -24,7 +24,7 @@ const Info = () => {
 
   const mostarProfe = (num)=>{
     setData(
-      <div>
+      <div className='lugar'>
         <h2> {valores[numero].boton1} </h2>
         <img src={imagenes[num]} alt='imagen' />
         <p> {valores[numero].nombre} </p>
@@ -33,7 +33,7 @@ const Info = () => {
   }
 
   return (
-    <div>
+    <div className='info'>
         <h1> {valores[numero].titulo} </h1>
         <h3> {valores[numero].texto} </h3>
         <div>
